@@ -1,0 +1,95 @@
+*{
+  box-sizing: border-box; /*If you inspect your .label element with your browser's developer tools, 
+  you may notice that it's actually 288 pixels wide instead of 270. This is because, by default, the browser includes the border and padding when 
+  determining an element's size.
+  To solve this, reset the box model by creating a * selector and giving it a box-sizing property of border-box. */
+}
+
+body{
+  font-family: "Open Sans", sans-serif;
+}
+
+html{
+  font-size: 16px;
+}
+
+.label{
+  border: 2px solid black;
+  width: 270px;
+  margin: 20px auto;
+  padding: 0 7px;
+}
+
+
+header h1{
+  text-align: center;
+  margin: -4px 0 -4px 0;
+  letter-spacing: 0.15px;
+}
+
+p{
+  margin: 0;
+}
+
+.divider{
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+  clear: right; /*Isso limpará a propriedade float(que se encontra em .right), empurrando o divisor e qualquer conteúdo seguinte abaixo do texto flutuante.*/
+}
+
+.bold{
+  font-weight: 800;
+}
+
+.right{
+  float: right;
+}
+
+.lg{
+  height: 10px;
+}
+
+.lg, .md{
+  background-color: black; /*Isso  com o de cima foi o que deu a targinha preta*/
+  border: 0;
+}
+
+.sm-text{
+  font-size: 0.85rem;
+  /* The rem unit stands for root em, and is relative to the font size of the html element.
+Create an .sm-text selector and set the font-size to 0.85rem, which would calculate to be roughly 13.6px 
+(remember that you set your html to have a font-size of 16px).*/
+}
+
+.calories-info h1{
+  margin: -5px -2px;
+  overflow: hidden; /*O número 230 das calorias ficou ultrapassando a borda o que se chama overflow*/
+}
+
+.calories-info span{
+  font-size: 1.2em;
+  margin-top: -7px; /* Mudou o 230 de lugar para ficar mais alinhado*/
+}
+
+.md{/*Segunda tarja*/
+  height: 5px; 
+}
+
+.indent{
+  margin-left: 1em;
+}
+
+.daily-value p:not(.no-divider){
+  border-bottom: 1px solid #888989;
+}
+
+.dbl-indent{
+  margin-left: 2em;
+}
+
+.note{
+  font-size: 0.6rem;
+  margin: 5px 0; /*Dessa forma remove o left e right e deixa o bottom e o top ficam em 5px*/
+  padding: 0 8px; /*Dessa forma remove o top e o bottom e deixa o right e o left com 8px*/
+  text-indent: -8px; /*Fez essa indentação negativa para deixar o texto todo alinhado*/
+}
